@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # mostrar
   get '/consoles/show' => 'consoles#show'
 
-  # crear
+  # crear nueva consola
   #get '/consoles/show' => 'consoles#new'
 
   
