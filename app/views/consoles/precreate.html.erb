@@ -1,0 +1,16 @@
+
+           
+<%= form_with(model: @console , local:true) do |form| %>
+           
+              <table>
+              <tr>    <td>  <%= form.label :nombre %> </td> <td>  <%= form.text_field :nombre %> </td>  </tr>
+              <tr>    <td>  <%= form.label :lanzamiento %> </td> <td>  <%= form.text_field :lanzamiento %> </td>  </tr>
+              <tr>    <td>  <%= form.label :precio %> </td> <td>  <%= form.text_field :precio %> </td>  </tr>
+              <tr>    <td>  <%= form.label :dimenciones %> </td> <td>  <%= form.text_field :dimenciones %> </td>  </tr>
+              <tr>    <td>  <%= form.label :marca %> </td> <td>  <%= form.text_field :marca %> </td>  </tr>       
+              </table>
+         
+            <%=form.submit%>
+
+ 
+<% end %>

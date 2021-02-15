@@ -1,32 +1,26 @@
 Rails.application.routes.draw do
 
 
-
-  root :to => "welcome#index"
+  #root :to => "welcome#index"
+  root "welcome#index"
   get '/' , to: "welcome#index "
 
-  
-
-  # mostrar
+  # mostrar todos
   get '/consoles/show' => 'consoles#show'
 
   # crear nueva consola
-  #get '/consoles/show' => 'consoles#new'
+  get '/consoles/precreate'  , to: 'consoles#precreate'  # al formulario
+  post 'consoles' , to: 'consoles#create'  # al formulario
 
-  
+  # mostrar uno
+  get '/consoles/showme/:id' , to: 'consoles#showme'
 
-  #get 'consoles' , to: "consoles#show "
+  #actualizar
 
+  get '/consoles/edit/:id' , to: 'consoles#preedit' 
+  patch '/consoles/:id' ,      to: 'consoles#edit'  , as: :console
+  # borrar uno 
+  get '/consoles/delete/' , to: 'consoles#delete'
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
-
-
-  #rails generate controller Plural 
-  #rails generate model Singlar 
-
-  # rails generate model Console nombre:string lanzamiento:string precio:string dimenciones:string marca:string 
-
-  # rails generate controller Consoles 
 
 end

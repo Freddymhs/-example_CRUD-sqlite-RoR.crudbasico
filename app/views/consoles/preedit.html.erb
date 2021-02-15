@@ -1,0 +1,24 @@
+            <%= form_with(model: @console, local: true) do |form| %> 
+            <table>
+              <tr>
+              <td>nombre actual </td>
+              <td>
+              <%= @console.nombre %>
+              </td>
+              </tr>
+              <tr>
+              <td>editarlo</td>
+              <td>
+              <%= form.label :nombre %>
+              <%= form.text_field :nombre %>
+              </td>
+              </tr>
+              </table>
+                
+    
+              <%=form.submit%>
+    
+    <% end %>
+    
+    
+    

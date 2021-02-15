@@ -1,10 +1,20 @@
+
 <% if @console %>
 
     
-    
+    existe won
     
     <% @console.each do |c| %>
-        <%= c.nombre %>
+       <div>
+
+       <%= c.id %>     <%= link_to "REVISAR !", "/consoles/showme/#{c.id}" %>   <%= link_to "EDITAR!", "/consoles/edit/#{c.id}" %>
+       <%= c.nombre %> 
+       <%= c.lanzamiento %>
+       <%= c.precio %>
+       <%= c.dimenciones %>
+       <%= c.marca %>
+       </div>
+   
      <%end %>
 
 
